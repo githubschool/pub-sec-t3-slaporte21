@@ -75,8 +75,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            DOCKER_ORG/demo-action:latest
-            DOCKER_ORG/demo-action:v1
+            slaporte21/demo-action:latest
+            slaporte21/demo-action:v1
 
       # Update Deployment API
       - name: update deployment status
