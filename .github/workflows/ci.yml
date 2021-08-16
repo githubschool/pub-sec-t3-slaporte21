@@ -65,7 +65,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
             name: my-artifact
-            path: readme.md
+            path: README.md
   task:
     # Name the Job
     name: Download Artifacts
