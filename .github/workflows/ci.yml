@@ -59,3 +59,24 @@ jobs:
             BUILD_REVISION=${{ github.sha }}
             BUILD_VERSION=${{ github.sha }}
           push: false
+          
+       # Upload an artifact to GitHub
+      - name: Upload Artifact to Github Build Job
+        uses: actions/upload-artifact@v2
+        with:
+            name: my-artifact
+            path: readme.md
+  task:
+    # Name the Job
+    name: Download Artifacts
+    # Set the agent to run on
+    runs-on: ubuntu-latest
+    ##################
+    # Load all steps #
+    ##################
+    steps:
+       # Download an artifact from GitHub
+      - name: Download Artifact from Github Build Job
+        uses: actions/download-artifact@v2
+        with:
+            name: my-artifact   
