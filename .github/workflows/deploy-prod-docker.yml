@@ -136,7 +136,7 @@ jobs:
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
           env_url: https://github.com/orgs/${{github.owner}}/packages?repo_name=${{github.repository}}
       - name: Wait for app build success
-        uses: fountainhead/action-wait-for-check@v1.0.0
+        uses: fountainhead/action-wait-for-check@v1.1.0
         id: wait-for-build-success
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
